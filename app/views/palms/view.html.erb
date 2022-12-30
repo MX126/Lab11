@@ -1,0 +1,27 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main class="px-3">
+    <h1>Результат</h1>
+    <p>Find me in app/views/palms/view.html.erb</p>
+    <table class="table table-bordered table-dark" id = "table_palms">
+      <thead>
+      <tr>
+        <th scope="col">Номер шага</th>
+        <th scope="col">Текущее значение</th>
+        <th scope="col">Подтверждение гипотезы</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @mas.each do |i| %>
+        <tr>
+          <th scope="row">  <%= i[0] %>  </th>
+          <td> <%= i[1] %> </td>
+          <td> <%= i[2] %> </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </main>
+  <%= link_to "Повторить вычисления", :palms_input,class:"text-white"%>
+</div>
+
+

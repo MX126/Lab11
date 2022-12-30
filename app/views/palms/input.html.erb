@@ -1,0 +1,32 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Лабораторная работа 11</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end"> </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <h1>Палиндром</h1>
+    <p class = "lead"> Существует гипотеза,что для любого натурального числа,если оно не палиндром,можно получить <br>
+      палиндром за конечное число шагов по определенной схеме.</p>
+    <p class = "lead"> Введите число : </p>
+    <%= form_tag("/palms/view", :method => "get") do %>
+      <%= text_field_tag(:v1) %>  <br/>
+      <p class="lead">
+        <%= submit_tag("Проверить гипотезу" , :class => "btn btn-primary my-2") %>
+      </p>
+    <% end %>
+    <%= link_to "Предыдущий результат вычисления",:db_worker_input,class:"text-white" %>
+
+  </main>
+  </br>
+  <footer class="mt-auto text-white-50">
+    <p> Работу выполнил: <a href="https://vk.com/m.khristokyan" class="text-white">Михаил Христокьян </a>, <br>
+    <p> GitHub:  <a href="https://github.com/MX126" class="text-white"> MX126 </a> </p>
+    </p>
+  </footer>
+</div>
+
+

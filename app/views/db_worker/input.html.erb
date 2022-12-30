@@ -1,0 +1,10 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main class="px-3">
+    <h1>Последние вычисления</h1>
+    <p>Введенное число: <%=Value.order("created_at").last.input%></p>
+    <p>Результат: <%=Value.order("created_at").last.output%></p>
+    <p class="lead">
+      <%=link_to 'На главную страницу', root_path%>
+    </p>
+  </main>
+</div>
